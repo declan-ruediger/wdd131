@@ -4,6 +4,7 @@
 
 h1 {
     margin: 20px;
+    width: 100%;
 }
 
 footer {
@@ -13,15 +14,33 @@ footer {
 
 body {
     display: grid;
-    grid-template: 200px 500px 300px / 3fr 1fr;
+    grid-template: 15em 30em 20em / 3fr 1fr;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: space-between;
+    height: 100%;
 }
 
 nav {
     display: flex;
+    align-self: flex-end;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: black;
+    width: 100%;
+}
+
+main, aside {
+    padding: 20px;
+}
+
+main {
+    background-color: rgb(204, 204, 204);
 }
 
 nav a {
