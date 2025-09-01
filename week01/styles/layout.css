@@ -1,0 +1,39 @@
+:root {
+    --white: rgb(244, 244, 244)
+}
+
+h1 {
+    margin: 20px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    display: grid;
+    grid-template: 200px 500px 300px / 3fr 1fr;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 10px 30px;
+    display: block;
+}
+
+header, footer {
+    grid-column: span 2;
+    background-color: rgb(51, 51, 51);
+    color: var(--white);
+}
+
