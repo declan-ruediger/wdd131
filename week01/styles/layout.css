@@ -21,7 +21,6 @@ body {
 header {
     display: flex;
     flex-flow: row wrap;
-    align-items: space-between;
     height: 100%;
 }
 
