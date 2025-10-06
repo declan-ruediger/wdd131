@@ -1,0 +1,85 @@
+<style>
+    table {
+        border: 1px solid rgb(225, 225, 225);
+        border-collapse: collapse;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    table thead tr th, table tbody tr td {
+        border: 1px solid rgb(225, 225, 225);
+    }
+
+    table thead tr th {
+        color: white;
+    }
+
+    table thead tr:nth-child(1) th {
+        background-color: black;
+        border: 1px solid black;
+        padding: 12px 10px;
+    }
+
+    table thead tr:nth-child(2) th:nth-child(1) {
+        background-color: black;
+        border: 1px solid black;
+    }
+
+    table thead tr:nth-child(2) th {
+        background-color: rgb(51, 51, 51);
+        border: 1px solid rgb(47, 47, 47);
+        padding: 14px 10px;
+    }
+
+    table tbody tr td {
+        padding: 9px 15px;
+        color: black;
+        font-weight: bold;
+    }
+
+    table tbody tr:nth-child(even) td {
+        background-color: rgb(238, 238, 238);
+    }
+    
+    table caption {
+        caption-side: bottom;
+        color: grey;
+        padding: 5px;
+    }
+
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="4">Acme Wildwest Services</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Basic</th>
+            <th>Premium</th>
+            <th>Deluxe</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>Feature 1</td>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td>Feature 2</td>
+                <td>❌</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td>Feature 3</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✔️</td>
+            </tr>
+        </tbody>
+    </thead>
+    <caption>Table 1: Account Feature Comparison</caption>
+</table>

@@ -1,0 +1,73 @@
+<span id="course-info"></span>
+
+<table>
+    <thead>
+        <tr>
+            <th>Section</th>
+            <th>Enrolled</th>
+            <th>Instructor</th>
+        </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+</table>
+
+<script>
+    let aCourse = {
+        code: "WDD131",
+        title: "Dynamic Web Fundamentals",
+        credits: 2,
+        sections: [
+                {
+                    section: "JS Objects",
+                    enrolled: true,
+                    instructor: "James Pipton"
+                },
+                {
+                    section: "JS Strings",
+                    enrolled: false,
+                    instructor: "Charles Pipton"
+                }
+            ]
+
+    };
+
+    function printNameandNumber(course) {
+        document.querySelector("#course-info").innerHTML = `${course.code} - ${course.title}`;
+    }
+
+    function printSectionsToTable(course) {
+        tableHTML = "";
+
+        course.sections.forEach(section => {
+            tableHTML +=
+                `<tr>\
+                    <td>${section.section}</td>\
+                    <td>${section.enrolled}</td>\
+                    <td>${section.instructor}</td>\
+                </tr>`
+        });
+
+        document.querySelector("#table-body").innerHTML = tableHTML;
+    }
+
+    printNameandNumber(aCourse);
+    printSectionsToTable(aCourse);
+
+    let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];
+
+    namesB = names.filter((value) => value[0] == "B")
+
+    namesLength = names.map((value) => value.length)
+
+    averageStringLength = names.reduce((acc, val, index) => ((acc * index + val.length) / (index + 1)), 0)
+</script>
+
+<style>
+
+
+    span p {font-size: 1.5rem}
+
+@media only screen and (min-width: 32rem) {
+     span {font-size: 2rem}
+}
+</style>
