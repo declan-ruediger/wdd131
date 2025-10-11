@@ -148,12 +148,10 @@ function updateTempleCards(temples) {
         document.getElementById("temples-container").innerHTML +=
             `<figure> \
                 <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy"> \
-                <caption> \
-                    <p>${temple.templeName}</p> \
-                    <p>${temple.location}</p> \
-                    <p>Dedicated: ${temple.dedicated}</p> \
-                    <p>Area: ${temple.area.toLocaleString()}f<sup>2</sup></p> \
-                </caption> \
+                <p>${temple.templeName}</p> \
+                <p>${temple.location}</p> \
+                <p>Dedicated: ${temple.dedicated}</p> \
+                <p>Area: ${temple.area.toLocaleString()}f<sup>2</sup></p> \
             </figure>`;
     });
 }
