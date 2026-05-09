@@ -31,7 +31,12 @@ body {
 	color: var(--accent1-color);
 }
 
-header, footer {
+header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+footer {
   width: 100%;
   margin: 0 auto;
 }
@@ -63,11 +68,12 @@ nav {
     align-items: center;
     background-color: var(--primary-color);
     width: 100%;
+    color: var(--light-font-color);
 }
 
 nav a {
-    color: var(--light-font-color);
     text-decoration: none;
+    color: inherit;
     margin: 10px 30px;
     display: block;
 }
