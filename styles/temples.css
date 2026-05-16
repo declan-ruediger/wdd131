@@ -1,16 +1,38 @@
 nav a.toggle-button {
-    flex-self: flex-end;
+    align-self: flex-end;
+    display: block;
 }
 
 nav a.toggle-button:hover {
     text-decoration: none;
 }
 
+nav a {
+    display: none;
+}
+
+nav a.show {
+    display: block;
+}
+
 div.card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 50rem;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    gap: 1em;
+    margin: 0 auto;
+}
+
+div.card-container figure {
+    width: 20em;
 }
 
 div.card-container figure img {
-    width: 20em;
+    width: 100%;
+}
+
+main { 
+  max-width: 50rem;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
 }

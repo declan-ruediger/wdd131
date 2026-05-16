@@ -14,11 +14,11 @@ function setVisibilityOfNavBarLinks(visibility_setting) {
     let display_value = ""
     switch (visibility_setting) {
         case "visible":
-            display_value = "block";
             navBarVisible = true;
+            break;
         case "hidden":
-            display_value = "none";
             navBarVisible = false;
+            break;
         default:
             TypeError();
 
@@ -28,14 +28,11 @@ function setVisibilityOfNavBarLinks(visibility_setting) {
     {
         let element = nav_bar.children[i];
         if (element.tagName == "A" & element.id != toggle_button_id) {
-            element.style = `display: ${display_value};`;
+            element.classList.toggle("show");
         }
     }
 }
 
-// TODO: if mobile
-if (true)
-{
     let nav_bar = document.getElementById("nav-bar");
     
     setVisibilityOfNavBarLinks("hidden");
@@ -50,9 +47,3 @@ if (true)
     nav_bar.appendChild(
         toggle_button_template
     );
-    //toogle nav a's from viewable to not viewable
-}
-// on hamburger click:
- // change hamburger to x
-
- // on x click, close hamburger

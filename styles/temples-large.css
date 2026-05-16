@@ -1,0 +1,9 @@
+@media (min-width: 32rem) {
+    nav a.toggle-button {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+    }
+}
