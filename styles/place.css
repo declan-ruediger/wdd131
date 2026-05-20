@@ -30,10 +30,6 @@ html {
     background-color: var(--accent1-color);
 }
 
-main {
-    background-color: white;
-}
-
 body {
 	font-family: var(--body-font);
 	color: var(--accent1-color);
@@ -52,6 +48,11 @@ header {
     padding: 0.25em;
 }
 
+header h1 {
+    font-size: 1em;
+    color: var(--light-font-color);
+}
+
 #small-pic {
     margin: 0;
     width: 100%;
@@ -59,6 +60,7 @@ header {
 
 main {
     margin: 0 auto;
+    background-color: white;
 }
 
 main h1 {
@@ -181,11 +183,23 @@ footer p {
         width: auto;
     }
 
+    div.weather-icon h2::after {
+        display: inline-block;
+        content: "";
+        background-image: url("../images/cloud-hail.svg");
+        --size: 2rem;
+        margin-left: 1rem;
+        background-size: var(--size) var(--size);
+        width: var(--size);
+        height: var(--size);
+    }
+
     div.weather-icon > img {
-        width: 3em;
+        display: none;
+        /* width: 3em;
         height: auto;
         margin: 0;
-        margin-left: 1rem;
+        margin-left: 1rem; */
     }
 
     div.cards {
