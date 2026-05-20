@@ -26,6 +26,14 @@
   box-sizing: border-box;
 }
 
+html {
+    background-color: var(--accent1-color);
+}
+
+main {
+    background-color: white;
+}
+
 body {
 	font-family: var(--body-font);
 	color: var(--accent1-color);
@@ -50,7 +58,6 @@ header {
 }
 
 main {
-    width: min(800px, 100%);
     margin: 0 auto;
 }
 
@@ -95,12 +102,98 @@ nav a:hover {
     /* transition: ; */
 }
 
+div.cards {
+    padding: 1rem;
+}
+
 section.card {
     border: 1px solid var(--accent2-color);
     border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1rem);
 }
 
 section.card img {
     height: 150px;
     width: auto;
+}
+
+img {
+    width: 100%;
+}
+
+div.weather-icon h2 {
+    width: 100%;
+}
+
+div.weather-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.weather-icon > img {
+    width: 5em;
+    height: auto;
+    margin: 1em;
+    margin-bottom: 0;
+}
+
+table.data-table {
+    margin: 1em auto;
+    font-size: large;
+    border-spacing: 1em 0.5em;
+}
+
+table.data-table tr td:first-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--accent1-color);
+    color: var(--light-font-color);
+    text-align: center;
+    padding: 1em;
+}
+
+footer p {
+    padding: 0;
+    margin: 1em;
+}
+
+@media (min-width: 32rem) {
+    picture.hero {
+        display: none;
+    }
+
+    section.card {
+        height: fit-content;
+    }
+
+    section.card-right {
+        align-self: flex-end;
+        margin-left: auto;
+    }
+
+    div.weather-icon h2 {
+        width: auto;
+    }
+
+    div.weather-icon > img {
+        width: 3em;
+        height: auto;
+        margin: 0;
+        margin-left: 1rem;
+    }
+
+    div.cards {
+        background-image: url("/images/australian-landscape.webp");
+        background-size: cover;
+        min-height: 35rem;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
 }

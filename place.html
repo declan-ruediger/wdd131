@@ -23,67 +23,73 @@
         Australia
     </header>
     <main>
-        <img id="small-pic" srcset="images/australian-landscape.webp 2x"
-        sizes="(50em <= width <= 60em) 50em, (30em <= width < 50em) 30em, (width < 30em) 20em" alt="A young young smiling broadly with a helmet on for whitewater rafting, or a Panorama of Lake Moogerah in South-East Queensland, Australia. The landscape is vast and full of dry Australian brush.">
-        
-        <section>
-            <h2>Header</h2>
-            <table>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-            </table>
-        </section>
-        <section>
-            <h2>Weather</h2>
-            <table>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Label:</td>
-                    <td>Value</td>
-                </tr>
-                <tr>
-                    <td>Wind Chill:</td>
-                    <td id="wind-chill-value"></td>
-                </tr>
-            </table>
-        </section>
+        <picture class="hero">
+            <!-- <source srcset="images/australian-landscape.webp" media="(min-width: 32rem)"> -->
+            <img src="images/australian-landscape-vertical.webp" alt="Lake Moogerah in South-East Queensland, Australia. The landscape is vast and full of dry Australian brush.">
+        </picture> 
+        <div class="cards">     
+            <section class="card">
+                <h2>Header</h2>
+                <table class="data-table">
+                    <tr>
+                        <td>Area:</td>
+                        <td>587,041 sq km</td>
+                    </tr>
+                    <tr>
+                        <td>Population:</td>
+                        <td>27,691,018</td>
+                    </tr>
+                    <tr>
+                        <td>Capital:</td>
+                        <td>Antananarivo</td>
+                    </tr>
+                    <tr>
+                        <td>Languages:</td>
+                        <td>Malagasy, French</td>
+                    </tr>
+                    <tr>
+                        <td>Currency:</td>
+                        <td>Malagasy Ariary</td>
+                    </tr>
+                    <tr>
+                        <td>Time Zone:</td>
+                        <td>UTC+3</td>
+                    </tr>
+                    <tr>
+                        <td>Calling Code::</td>
+                        <td>+261</td>
+                    </tr>
+                    <tr>
+                        <td>Internet TLD:</td>
+                        <td>.mg</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="card card-right">
+                <div class="weather-icon">
+                    <h2>Weather</h2>
+                    <img src="images/cloud-hail.svg" alt="Cloud with Hail">
+                </div>
+                <table class="data-table">
+                    <tr>
+                        <td>Temperature:</td>
+                        <td>10°C</td>
+                    </tr>
+                    <tr>
+                        <td>Conditions:</td>
+                        <td>Partly Cloudy</td>
+                    </tr>
+                    <tr>
+                        <td>Wind:</td>
+                        <td>5 km/h</td>
+                    </tr>
+                    <tr>
+                        <td>Wind Chill:</td>
+                        <td id="wind-chill-value">9.38°C</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
     </main>
     <footer>
         <p>&copy;<span id="currentyear"></span> | Declan Paul Ruediger | Australia</p>
