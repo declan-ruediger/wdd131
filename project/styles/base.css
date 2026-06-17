@@ -1,0 +1,154 @@
+:root {
+	--baltic-blue: #376996;
+	--rosy-copper: #CD5334;
+	--floral-white: #FEF7EB;
+
+	--primary-color: var(--baltic-blue);
+	--accent-color: var(--rosy-copper);
+	--background-color: var(--floral-white);
+	--light-text-color: var(--floral-white);
+
+	--radius: 1rem;
+	--box-shadow: rgba(149, 157, 165, 0.5) 0px 0.2rem 0.6rem;
+}
+
+html {
+	font-family: "Cause", cursive;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+
+	background-color: var(--background-color);
+}
+
+main {
+	padding: 0.5rem;
+	max-width: 50rem;
+	margin: 0 auto;
+}
+
+nav.navbar {
+	background-color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--primary-color);
+}
+
+p {
+	text-align: justify;
+	font-size: large;
+}
+
+a {
+	color: var(--accent-color);
+}
+
+a:visited {
+	color: var(--primary-color);
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+pre {
+	background-color: var(--primary-color);
+	border-radius: var(--radius);
+	padding: 1rem;
+	color: var(--light-text-color);
+	box-shadow: var(--box-shadow);
+}
+
+code {
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+strong {
+	color: var(--accent-color);
+}
+
+img, object {
+	width: 100%;
+	box-shadow: var(--box-shadow);
+}
+
+table {
+	--border-style: 1px solid rgba(0, 0, 0, 0.5);
+	border-collapse: separate;
+	border-spacing: 0;
+
+	box-shadow: var(--box-shadow);
+	border-radius: var(--radius);
+	
+	width: 100%; 
+
+	td {
+		border: var(--border-style);
+		border-left: none;
+		border-top: none;
+		padding: 1rem;
+	}
+
+	tr {
+		td:first-child {
+			border-left: var(--border-style);
+		}
+	}
+
+	thead {
+		font-weight: bold;
+
+
+		tr:first-child {
+			td:first-child {
+				border-top-left-radius: var(--radius);
+			}
+
+			td {
+				border-top: var(--border-style);
+				background-color: var(--primary-color);
+				color: var(--light-text-color);
+			}
+
+			td:last-child {
+				border-top-right-radius: var(--radius);
+			}
+		}
+	}
+
+	tbody {
+		tr:last-child {
+			td:first-child {
+				border-bottom-left-radius: var(--radius);
+			}
+
+			td:last-child {
+				border-bottom-right-radius: var(--radius);
+			}
+		}
+	}
+}
+
+table.color-schema {
+	td.preview {
+		background-color: var(--preview-color);
+	}
+
+	td.preview.baltic-blue {
+		--preview-color: var(--baltic-blue);
+	}
+
+	td.preview.rosy-copper {
+		--preview-color: var(--rosy-copper);
+	}
+
+	td.preview.floral-white {
+		--preview-color: var(--floral-white);
+	}
+}
