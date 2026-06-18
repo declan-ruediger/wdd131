@@ -56,7 +56,7 @@ header {
 		font-weight: bold;
 	}
 
-	.hamburger {
+	.menu-button {
 		display: inline-block;
 		--size: 2rem;
 		width: var(--size);
@@ -72,9 +72,7 @@ header {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 1s ease-out;
+		display: none;
 
 		a {
 			color: inherit;
@@ -92,30 +90,26 @@ header {
 }
 
 header.active {
-	.hamburger {
+	.menu-button {
 		mask: url("../images/x.svg") no-repeat center / contain;
 	}
 
 	nav#navbar {
-		max-height: 1000rem;
+		display: flex;
 	}
 }
 
 @media screen and (min-width: 40rem) {
 	header {
-		.hamburger {
+		.menu-button {
 			display: none;
 		}
 
 		nav#navbar {
+			display: flex;
 			box-shadow: none;
 			width: initial;
 			flex-direction: row;
-			max-height: 1000rem;
-
-			a {
-				/* flex-grow: 0; */
-			}
 		}
 	}
 }

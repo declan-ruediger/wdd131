@@ -49,7 +49,7 @@ const cards = document.querySelector("#how-to-cards-container");
 function createCard(guide) {
     let card = document.createElement("div");
     card.innerHTML = `
-        <div><img src="images/${guide.image_filename}.webp" alt="${guide.image_alt}" loading="lazy"/></div>
+        <div><img src="images/${guide.image_filename}.webp" alt="${guide.image_alt}" loading="lazy"></div>
         <div>
             <span><h3>${guide.name}</h3><span><span></span></span></span>
             <p>${guide.description}</p>
@@ -98,8 +98,6 @@ function updateCards(guides) {
     });
 }
 
-updateCards(guides);
-
 let tagSet = new Set();
 guides.forEach(guide => {
     guide.tags.forEach(tag => {
@@ -138,3 +136,5 @@ function filterbyTag(tag) {
 tagSelector.addEventListener("change", function () {
     filterbyTag(this.value);
 });
+
+filterbyTag(tagSelector.value);

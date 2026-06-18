@@ -9,7 +9,7 @@ for (var i = 0; i < navBar.children.length; i++) {
 
 const header = document.querySelector("header");
 
-const hamburgerButton = document.querySelector(".hamburger");
+const hamburgerButton = document.querySelector(".menu-button");
 
 hamburgerButton.addEventListener("click", function() {
     header.classList.toggle("active");

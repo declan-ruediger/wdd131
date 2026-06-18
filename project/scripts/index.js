@@ -9,5 +9,5 @@ mailingListForm.addEventListener("submit", function(event) {
 
     let signUpButton = document.querySelector("#email-signup-button");
 
-    signUpButton.textContent = `Sucess! You're signed up at ${emailAddress}`;
+    signUpButton.textContent = `Success! You're signed up at ${emailAddress}`;
 });

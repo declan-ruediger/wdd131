@@ -75,7 +75,7 @@
                     }
                 }
 
-                > span:hover {
+                > span:hover:active {
                     transform: scale(0.95);
                 }
 
