@@ -2,7 +2,7 @@ const navBar = document.querySelector("#navbar");
 
 for (var i = 0; i < navBar.children.length; i++) {
     let siteLink = navBar.children[i];
-    if (siteLink.attributes.href.value == window.location.pathname.replace("/project/", "")) {
+    if (siteLink.attributes.href.value.replace(".html", "") == window.location.pathname.split("/").pop().replace(".html", "")) {
         siteLink.classList.add("active");
     }
 }
