@@ -7,7 +7,8 @@ const guides = [
         "url": "https://docs.immich.app/overview/quick-start/",
         "tags": [
             "App",
-            "Photos / Videos"
+            "Photos / Videos",
+            "Big Tech Alternative"
         ]
     },
     {
@@ -31,7 +32,8 @@ const guides = [
         "tags": [
             "App",
             "File Sync",
-            "Federated"
+            "Federated",
+            "Big Tech Alternative"
         ]
     }
 ];
