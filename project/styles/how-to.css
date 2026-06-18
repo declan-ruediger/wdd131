@@ -1,0 +1,120 @@
+.how-to-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    gap: 1rem;
+    align-items: stretch;
+
+    > div {
+        border-radius: var(--radius);
+        box-shadow: var(--box-shadow);
+        border: 2px solid var(--primary-color);
+        width: 14rem;
+        flex-grow: 1;
+        transition: transform 0.15s ease-out;
+        cursor: pointer;
+        
+
+        > div:first-child {
+            background-color: white;
+            border-top-left-radius: var(--radius);
+            border-top-right-radius: var(--radius);
+            /* border-bottom: inherit; */
+            box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.15);
+
+            > img {
+                border-top-left-radius: var(--radius);
+                border-top-right-radius: var(--radius);
+            }
+        }
+
+        > div:nth-child(2) {
+            margin: 1rem;
+
+            > span {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;;
+                width: 100%;
+
+                > h3 {
+                    margin: 0;
+                }
+
+                > span {
+                    background-color: rgba(0, 0, 0, 0);
+                    --size: 2.5rem;
+                    margin: -1rem 0;
+                    width: var(--size);
+                    height: var(--size);
+                    border-radius: 1000rem;
+                    filter: var(--drop-shadow);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--primary-color);
+                    transition: 
+                        transform 0.15s ease-out
+                        background-color 0.15s ease-out;
+
+
+                    > span { 
+                        display: inline-block;
+                        --size: 1.5rem;
+                        width: var(--size);
+                        height: var(--size);
+                        background-color: currentColor;
+                        mask: url("../images/heart.svg") no-repeat center / contain;
+                    }
+                }
+
+                > span:hover { 
+                    transform: scale(1.05);
+                    > span {
+                        mask: url("../images/heart-plus.svg") no-repeat center / contain;
+                    }
+                }
+
+                > span:hover {
+                    transform: scale(0.95);
+                }
+
+                > span.active {
+                    background-color: var(--primary-color);
+                    color: var(--light-text-color);
+                }
+
+                > span.active:hover {
+                    > span {
+                        mask: url("../images/heart-minus.svg") no-repeat center / contain;
+                    }
+                }
+
+            }
+
+            > div {
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+
+                > span {
+                    background-color: var(--primary-color);
+                    color: var(--light-text-color);
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 100rem;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+
+    > div:hover {
+        border: 2px solid var(--accent-color);
+        box-shadow: rgba(205, 83, 52, 0.5) 0 0.2rem 0.6rem;
+        transform: scale(1.05);
+    }
+
+    > div:hover:active {
+        transform: scale(0.95);
+    }
+}
